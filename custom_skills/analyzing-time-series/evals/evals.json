@@ -1,0 +1,29 @@
+{
+  "skill_name": "analyzing-time-series",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Here's a CSV of my daily website traffic for the past 2 years (date, visits). Can you analyze it and tell me if it's worth trying to forecast, and if so what kind of model I should use?",
+      "expected_output": "Runs diagnose.py, reports stationarity verdict, detects weekly seasonality (period=7), reports forecastability, recommends appropriate model (e.g. SARIMA or Prophet), suggests transform if variance is non-constant.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "I have monthly sales data going back 5 years. The data looks like it just wanders around with no real pattern — is it forecastable? I attached the CSV.",
+      "expected_output": "Runs diagnose.py, ADF test shows non-stationarity (random walk), Ljung-Box shows low autocorrelation, forecastability reported as low, recommends differencing (d=1) and notes limited forecastability from past values alone.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "My hourly temperature readings CSV has really inconsistent variance — some months are way more volatile than others. Should I transform the data before modeling it?",
+      "expected_output": "Runs diagnose.py, detects variance instability, recommends log or Box-Cox transform, explains why (to stabilize variance before fitting), reports seasonal period (24 or 168), summarizes stationarity and seasonality findings.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Can you check my quarterly revenue data for trends and seasonality? I want to know if there's a consistent pattern I can exploit.",
+      "expected_output": "Runs diagnose.py, detects trend via Spearman correlation, seasonal period=4 (annual), strong seasonal strength reported, recommends SARIMA or ETS with seasonal component, generates decomposition plot.",
+      "files": []
+    }
+  ]
+}

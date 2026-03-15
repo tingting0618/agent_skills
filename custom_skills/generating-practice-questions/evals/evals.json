@@ -1,0 +1,29 @@
+{
+  "skill_name": "generating-practice-questions",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Here are my lecture notes on K-Nearest Neighbors (plain text). Make practice questions for my students.",
+      "expected_output": "Generates all four question types in order: True/False (one per learning objective or 3-5), Explanatory (3-5 questions), Coding (1 KNN implementation question with function signature and steps), Use Case (1 realistic scenario). No answer key included. Output in plain text.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Can you turn this lecture PDF on regularization (L1/L2) into a LaTeX practice exam I can hand out?",
+      "expected_output": "Reads assets/questions_template.tex and uses it as skeleton. Extracts learning objectives and topics from regularization lecture. Generates all four question types. Output is valid LaTeX using the template structure. No answer key.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "I have a lecture on photosynthesis (Markdown file). I need some study questions for my biology students.",
+      "expected_output": "Generates all four question types appropriate to biology content. Does NOT read examples_by_topic.md (ML-only). If user requests Markdown output, reads markdown_template.md. No answer key. Examples and scenarios are biology-specific, not ML.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Make practice questions from this Decision Trees lecture. The lecture has explicit learning objectives listed at the top.",
+      "expected_output": "Detects learning objectives at top of lecture. Generates one True/False per learning objective (not a fixed 3-5). Reads examples_by_topic.md for ML-calibrated examples since content is ML. Generates all four question types. No answer key.",
+      "files": []
+    }
+  ]
+}
