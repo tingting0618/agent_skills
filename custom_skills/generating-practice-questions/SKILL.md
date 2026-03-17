@@ -8,7 +8,7 @@ description: >
   output format. Trigger on phrases like "make practice questions from my notes",
   "quiz me on this lecture", "create exam prep from my slides", "I need to test my
   students on this chapter", or any request to turn educational content into questions.
---- 
+---
 
 # Practice Question Generator
 
